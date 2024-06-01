@@ -27,10 +27,11 @@ Reactions // table: reactions
 
 Posts // table: posts
     id: number
-    title: string
+    name: string
     body: string
     created_at: string
     author_id: string
+    likes_count: number
 
 */
 
