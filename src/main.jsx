@@ -6,15 +6,15 @@ import { mode } from "@chakra-ui/theme-tools";
 
 const colors = {
   brand: {
-    900: "#1a365d",
-    800: "#153e75",
-    700: "#2a69ac",
-    600: "#3182ce",
-    500: "#4299e1",
-    400: "#63b3ed",
-    300: "#90cdf4",
-    200: "#bee3f8",
-    100: "#ebf8ff",
+    900: "#0D3B66", // Dark Blue
+    800: "#145DA0", // Medium Dark Blue
+    700: "#1E81B0", // Medium Blue
+    600: "#2081C3", // Medium Light Blue
+    500: "#3D9DD1", // Light Blue
+    400: "#68B2E8", // Lighter Blue
+    300: "#A3D5F7", // Very Light Blue
+    200: "#CFE8FF", // Pale Blue
+    100: "#EAF6FF", // Very Pale Blue
   },
 };
 
