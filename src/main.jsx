@@ -6,23 +6,23 @@ import { mode } from "@chakra-ui/theme-tools";
 
 const colors = {
   brand: {
-    900: "#1a365d",
-    800: "#153e75",
-    700: "#2a69ac",
-    600: "#3182ce",
-    500: "#4299e1",
-    400: "#63b3ed",
-    300: "#90cdf4",
-    200: "#bee3f8",
-    100: "#ebf8ff",
+    900: "#22543d",
+    800: "#276749",
+    700: "#2f855a",
+    600: "#38a169",
+    500: "#48bb78",
+    400: "#68d391",
+    300: "#9ae6b4",
+    200: "#c6f6d5",
+    100: "#f0fff4",
   },
 };
 
 const styles = {
   global: (props) => ({
     body: {
-      bg: mode("gray.100", "gray.900")(props),
-      color: mode("gray.800", "whiteAlpha.900")(props),
+      bg: mode("green.100", "green.900")(props),
+      color: mode("green.800", "whiteAlpha.900")(props),
     },
   }),
 };
