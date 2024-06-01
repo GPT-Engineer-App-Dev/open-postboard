@@ -1,4 +1,5 @@
 import { Container, VStack, Heading, Textarea, Button, Box, Text, useColorMode, IconButton } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePosts, useAddPost } from "../integrations/supabase";
 import { FaSun, FaMoon } from "react-icons/fa";
@@ -23,7 +24,7 @@ const Index = () => {
   }, [isError]);
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Container as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4} width="100%">
         <Box display="flex" justifyContent="space-between" width="100%">
           <Heading as="h1" size="xl" color="brand.600">Public Postboard</Heading>
@@ -42,13 +43,13 @@ const Index = () => {
           color="black"
           _placeholder={{ color: "gray.500" }}
         />
-        <Button colorScheme="brand" onClick={handlePost} isLoading={addPostMutation.isLoading}>Post</Button>
+        <Button as={motion.button} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} colorScheme="brand" onClick={handlePost} isLoading={addPostMutation.isLoading}>Post</Button>
         <Box width="100%" mt={4}>
           {isLoading ? (
             <Text>Loading...</Text>
           ) : (
             posts?.map((post) => (
-              <Box key={post.id} p={4} shadow="md" borderWidth="1px" borderRadius="md" mb={4} bg="white">
+              <Box as={motion.div} key={post.id} p={4} shadow="md" borderWidth="1px" borderRadius="md" mb={4} bg="white" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
                 <Text>{post.body}</Text>
               </Box>
             ))
