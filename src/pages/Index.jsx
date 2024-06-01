@@ -9,7 +9,7 @@ const Index = () => {
 
   const handlePost = () => {
     if (newPost.trim() !== "") {
-      addPostMutation.mutate({ title: newPost, body: newPost });
+      addPostMutation.mutate({ name: newPost, body: newPost });
       setNewPost("");
     }
   };
